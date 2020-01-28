@@ -8,7 +8,7 @@ class Queue:
     self.size = 0
     # what data structure should we
     # use to store queue elements?
-    self.storage = DoublyLinkedList()
+    self.storage = []
 
   def enqueue(self, item):
     self.size += 1
