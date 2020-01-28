@@ -9,7 +9,7 @@ class Stack:
         self.storage = DoublyLinkedList()
 
     def push(self, value):
-        elf.storage.add_to_tail(value)
+        self.storage.add_to_tail(value)
 
     def pop(self):
         self.storage.remove_from_tail()
