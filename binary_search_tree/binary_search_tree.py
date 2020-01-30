@@ -6,13 +6,31 @@ from dll_stack import Stack
 
 class BinarySearchTree:
     def __init__(self, value):
+        # Value at current node
         self.value = value
         self.left = None
         self.right = None
 
     # Insert the given value into the tree
     def insert(self, value):
-        pass
+        # Check to see if there is a current node
+        if not self:
+            return 'Empty'
+
+        # Check to see if new node value is less than current node value
+        if value < self.value:
+            if not self.left:
+                self.left = BinarySearchTree(value)
+            else:
+                return self.left.insert(value)
+
+        # Check if new node value is greater than current node value
+        if value >= self.value:
+            if not self.right:
+                self.right = BinarySearchTree(value)
+            else:
+                return self.right.insert(value)
+
 
     # Return True if the tree contains the value
     # False if it does not
